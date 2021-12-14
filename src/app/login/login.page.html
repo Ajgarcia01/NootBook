@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-card>
+      <img width="100" height="100" src="https://i.postimg.cc/Qt8TFK9L/asdasd.jpg" class="to4">
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title>WELCOME TO NOTEA</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form>
+        <ion-item lines="full">
+          <br>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" #email required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <br>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" #password required></ion-input>
+        </ion-item>
+        <br><br>
+      </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="to2">
+  <ion-row>
+    <ion-col>
+      <ion-button type="submit" (click)="logIn(email,password)" expand="block">Login &nbsp;
+        <ion-icon name="mail"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <span class="center-span"> or </span>
+  <ion-row>
+    <ion-col>
+      <ion-button type="submit" color="danger" (click)="signin()" expand="block">
+        WITH GOOGLE &nbsp;<ion-icon name="logo-google"> </ion-icon> 
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p class="ion-text-end">
+        <br>
+        <a routerLink="/register" class="center-span">Create an account </a>
+      </p>
+    </ion-col>
+  </ion-row>
+  </div>
+
+</ion-content>

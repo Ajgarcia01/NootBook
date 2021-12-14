@@ -1,0 +1,31 @@
+<ion-app>
+  <ion-menu side="start" menuId="first">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title> {{'CONTACTS' | translate | titlecase}}</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <br>
+        <ion-item>
+          <ion-label>Español</ion-label>
+          <ion-toggle #mitoogle color="primary" (ionChange)=cambiaIdioma($event) class="de"></ion-toggle>
+          <ion-label>English</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-button expand="full" size="large" class="de2" (click)="takeFoto()">{{'PHOTO' | translate | titlecase}}<ion-icon slot="end" name="camera"></ion-icon></ion-button>
+        </ion-item>
+       
+          <ion-button expand="block" size="small" class="de3" (click)="End()">{{'CLOSE' | translate | titlecase}}<ion-icon slot="end" name="close-circle"></ion-icon></ion-button>
+          <ion-item>
+           <ion-img *ngIf="this.image" [src]="this.image"></ion-img> 
+          </ion-item>
+          
+        
+       
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-app>

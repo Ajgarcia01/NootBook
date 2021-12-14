@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register User</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="to1">
+    
+    <ion-card>
+      <div>
+        <img width="100" height="100" src="https://i.postimg.cc/Qt8TFK9L/asdasd.jpg" class="to4">
+      </div>
+      
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title class="te">NOTEA REGISTER</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form>
+          <ion-item lines="full" lines="full">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="text" #email required></ion-input>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" #password required></ion-input>
+          </ion-item>
+          <br>
+          <ion-row>
+            <ion-col>
+              <ion-button type="submit" (click)="registerUser(email, password)" expand="block">Register</ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+        <br>
+        <ion-row>
+          <ion-col>
+            <p class="te">
+              <a routerLink="/">Already have an account? </a>
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+ 
+</ion-content>

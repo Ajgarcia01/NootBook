@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button size="small" (click)="exit()"><ion-icon name="arrow-back-sharp"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Edit Note</ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title class="te">EDIT YOUR NOTE</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formNota">
+        <div class="flot">
+        <ion-item>
+          <ion-label>Title:  </ion-label>
+          <ion-input  type="text" formControlName="title"></ion-input>
+        </ion-item>
+        <br>
+        <br>
+        <ion-item>
+         <ion-label>Description:</ion-label>
+         <ion-textarea class="espD" type="text" formControlName="descripcion"></ion-textarea>
+       </ion-item>
+       <br>
+       <ion-button color="primary" class="cent" type="submit" [disabled]="this.formNota.invalid" (click)="editNote()">Edit</ion-button>
+        </div>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

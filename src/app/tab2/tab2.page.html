@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Add Note
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+<ion-content  fullscreen class="ion-padding">
+  <ion-card class="espT">
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title class="te">ADD YOUR NOTE</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="centrado">
+        <form [formGroup]="formNota"(ngSubmit)="addNote()" >
+       <ion-item>
+         <ion-label>Title: </ion-label>
+         <ion-input type="text" formControlName="title"></ion-input>
+       </ion-item>
+       <br>
+       <ion-item>
+        <ion-label>Description : </ion-label>
+        <ion-textarea class="espD"  type="text" formControlName="descripcion"></ion-textarea>
+      </ion-item>
+      <br>
+      <ion-button color="primary" type="submit"  class="centrado2" [disabled]="this.formNota.invalid" (click)="obtenerCoordenadas()">Add New Nota</ion-button>
+      <br>
+     </form>
+      </div>
+    </ion-card-content>
+    </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title align="center">NOTEA ®</ion-title>
+  </ion-toolbar>
+</ion-footer>
